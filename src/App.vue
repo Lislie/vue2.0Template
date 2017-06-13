@@ -32,7 +32,6 @@
     created () {
       this.$http.get('/api/seller').then((response) => {
         response = response.body
-        console.log(response)
         if (response.errno === ERR_OK) {
           this.seller = response.data
         }
@@ -50,7 +49,6 @@
       width: 100%
       height: 40px
       line-height: 40px
-    // border-bottom: 1px solid rgba(7, 17, 27, 0.1)
       border-1px(gba(7, 17, 27))
       .tab-item
         flex: 1
@@ -61,6 +59,4 @@
           color: rgb(77, 85, 93)
           &.active
             color: rgb(240, 20, 20)
-
-
 </style>
